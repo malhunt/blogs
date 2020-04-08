@@ -1,5 +1,5 @@
 ---
-title: Another Sample Page
+title: Yara-Rules
 date: 2020-4-8
 published: true
 ---
