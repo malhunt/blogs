@@ -1,0 +1,196 @@
+---
+title: Cyber-kill-chain
+date: 2020-4-8
+published: true
+---
+Cyber Kill Chain
+    Lakshya Dubey
+
+
+
+Agenda
+
+
+Cyber Kill Chain
+- Intro
+- Usefullness
+- APT
+- APT threat modeling
+- The Cyber Kill Chain Phases
+- Defence in Depth  
+-Tools and technique for the defensive action against cyber kill chain
+
+
+What is the Cyber Kill Chain Model?
+
+‘Kill chain’ is a term originally used by the military to define the steps an enemy uses to attack a target. Similar in concept to the
+military’s model, it defines the steps used by cyber attackers in today’s digital or computer-based attacks. Today’s threat landscape
+has expanded and evermore, cyber-security overlaps many other aspects of security.
+The kill chain helps us to understand and combat malware, APT, and security breaches. There are several core stages in the cyber kill
+chain. All of your common attack vectors – whether phishing or brute force or the latest strain of malware – trigger activity on the
+cyber kill chain.
+
+Its Use?
+
+As the more advanced and persistent end of this threat actor spectrum, actors are often described as Advanced Persistent Threats
+(APTs).To assess their security posture and improve their resilience against APT attacks, many organizations hire Red Teams that are
+ comprised of ethical hackers. Red Teams take an attacker-like approach to compromising critical supporting ICT assets. The
+predictive value of the threat emulations offered by Red Teams relies on the alignment of the modus operandi (MO) of the Red Team
+with the relevant threat actors. However, the tactics and operational techniques and procedures that are used
+by these actors do not necessarily coincide. To perform a structured analysis of the MO of Red Teams and APTs, threat modeling is
+required. The Cyber Kill Chain is frequently regarded as the industry-standard model for defending against APTs.
+It is an industry-accepted methodology for understanding how an attacker will conduct the activities necessary to cause harm to your
+organization. An effective understanding of the cyber kill chain will greatly assist the information security professional in
+establishing strong controls and countermeasures, which will serve to protect their organization's assets.
+
+APT
+
+An advanced persistent threat (APT) is the most recent type of attack is defined as a  targeted attack by cybercriminals or in some
+cases nation-state that uses multiple phases to first stealthily penetrate a network while avoiding detection and then obtain valuable
+ information or damaging the system over an extended period-of-time. Advanced persistent threats are highly complex threats that
+ differ from traditional threats in that they are targeted, persistent, evasive and extremely advanced.
+APT is a sophisticated, mercurial way that advanced attackers can break into systems, not get caught, keeping long-term access to
+exfiltrate data at will.
+While the threat is advanced once it gets into a network, the entry point with many attacks is focusing on convincing a user to click
+ on a link. However, once the APT breaks into a system, it is very sophisticated in what it does and how it works. The signature
+analysis will be ineffective in protecting against it. Advanced attacks are always changing, recompiling on the fly and utilizing
+encryption to avoid detection.
+
+APT Threat Modeling
+
+Attacks by APTs typically extend beyond exploiting one vulnerability in an internet-connected system. Depending on the security
+posture of the target, APT attacks may require an attack path during which multiple correlated vulnerabilities are exploited before
+assets can be targeted and objectives can be achieved. Within the attack path, discrete phases can be discerned that are
+captured by Cyber Kill Chain in a linear and sequential model. The CKC, as well as other attack lifecycle models, can help defenders
+understand the increasingly complex attacks that they are facing. Without understanding how modern attacks take place, it is very
+difficult to properly defend against them.
+
+The Cyber Kill Chain Phases
+
+The essence of an attack is that an “aggressor must
+develop a payload to breach a trusted boundary, establish a presence inside a trusted environment,
+and from that presence, take actions towards their objectives”  The chain of events, or kill
+chain, Each stage is related to a certain type of activity in a cyberattack, regardless of whether it’s internal or external
+attack.
+
+**********************************************FIG*****************************
+
+Reconnaissance - The attacker gathers information on the target before the actual attack starts. Researching, identifying and
+selecting targets. This may consist of passive reconnaisance of open source intelligence (OSINT) or active reconnaisance where
+internet facing systems are probed for potential weaknesses, often represented as crawling Internet websites such as conference
+proceedings and mailing lists for email addresses, social relationships, or information on specific technologies. the efforts of a
+threat actor to gain as much information about the network as possible before launching other more serious types of attacks. Quite
+often, the reconnaissance attack is implemented by using readily available information. In the case of the “Internal” Cyber Kill
+Chain, it is the act of gathering information on network assets, files, databases and any other material that the attack may want to
+exfiltrate as well how using that information to decide the most effective method of exfiltration.
+
+Weaponization - During weaponization, the threat actor develops malware specifically crafted to the vulnerabilities discovered
+during the reconnaissance phase of the cyber kill chain. Based on the intelligence gathered in the reconnaissance phase, the
+an attacker will tailor their toolset to meet the specific requirements of the target network.
+For example, Coupling a remote access trojan with an exploit into a deliverable payload, typically using an automated tool.
+Increasingly, client application data files such as Adobe Portable Document Format (PDF) or Microsoft Office documents serve as the
+weaponized deliverable.
+
+
+Delivery - Transmission of the weapon to the targeted environment. The three most prevalent delivery vectors for weaponized payloads
+are email attachments, websites, and USB removable media. a network attack is most likely to originate from a spear-phishing attack
+targeting an internal employee of the organization. A carefully researched and crafted spear-phishing campaign against an organization
+based on information gathered during the reconnaissance phase would result in the organization's employees executing the APT malware
+or malicious code on their information systems. The spear-phishing message will most likely contain an attachment such as a Microsoft
+Word or an Adobe PDF document. The attachment would contain code that, when executed, would result in the APT or the malware gaining
+a foothold on the organizational network. Another available opportunity for exploitation is examining the organizational public IP
+space for mismanaged servers. A lack of cyber hygiene practices within an organization's network could result in vulnerable production
+systems.
+
+
+Exploitation - After the weapon is delivered to the victim host, exploitation triggers intruders’ code. Most often, exploitation
+targets an application or operating system vulnerability, but it could also more simply exploit the users themselves or leverage an
+operating system feature that auto-executes code. Exploitation triggers the intruders' payload. Exploitation may target vulnerability
+or feature in an application or the operating system. Exploitation can also involve social engineering to target a user directly.
+malware code is executed on the target network through remote or local mechanisms, taking advantage of discovered vulnerabilities to
+gain superuser access to the targeted organizational information system.
+
+Installation - Installation of a remote access trojan or backdoor on the victim system allows the adversary to maintain persistence
+inside the environment. Persistence all the attacker to maintain access on the system even after the system gets restarted or log-off.
+the persistence mechanism can be pf any form like rootkit, mutex, etc. Once the exploitation of the system has been successful, the
+APT malware code will install itself onto the targeted information system. At this point, the malware can begin to download additional
+software if network access is available. This allows the delivery payload to remain small and undetectable.
+The small size of the malware in this example would have limited functionality. Therefore, the malware can download additional
+components to have better control of the exploited information systems and to penetrate further into the target organization's
+network.
+
+
+Command and Control (C2)-  Beaconing outbound to an Internet controller server to establish a Command & Control (C2) channel. The
+channel provides attackers with direct remote access to the compromised system in the target environment. compromised hosts must
+beacon outbound to an Internet controller server to establish a C2 channel.  malware especially requires manual interaction rather
+than conduct activity automatically. Once the C2 channel establishes, intruders have “hands on the keyboard” access inside the target
+environment.
+
+
+Actions on Objectives - after progressing through the first six phases, can intruders take actions to achieve their original
+objectives. Taking actions on the original objectives, such as exfiltration of confidential data, the violation of data integrity or
+availability, or compromising additional systems.  Alternatively, the intruders may only desire access to the initial victim box for
+use as a hop point to compromise additional systems and move laterally inside the network.
+
+
+Defence in Depth -
+
+
+Control the user and raise awareness — the general rule is you cannot stop stupid, but you can control stupid. Many threats enter a
+network by tricking the user into clicking a link that they shouldn't. Limiting the actions a user is allowed to do with proper
+awareness sessions can go a long way to reduce the overall exposure.
+
+Focus on outbound traffic — Inbound traffic is often what is used to prevent and stop attackers from entering a network. While it
+will catch some attacks and is still important to do, with the APT it is the outbound traffic that is more damaging. If the intent
+is to stop the exfiltration of data and information, looking at the outbound traffic is how you detect anomalous behavior,
+which is tied to damage to an organization.
+
+Manage the endpoint — while attackers might break into a network as the entry point, they ultimately want to steal information that
+exists on endpoints. If you want to limit the damage, controlling and locking down the endpoint will go a long way to protect an
+organization.
+
+Understand the changing threat — it is hard to defend against something you do not know about. Therefore, the only way to be good at
+the defense is to understand and know how the offense operates. If organizations do not continue to understand the new techniques
+and tactics of the attackers, they will not be able to effectively tune their defensive measures to work correctly.
+
+Tools and technique for the defensive action against cyber kill chain:
+
+**************** fig *****************
+
+OSINT - OSINT stands for Open Source Intelligence, and it is one of the key aspects in understanding the cybersecurity that rules the Internet these days. Open-source intelligence (OSINT) is information collected from public sources such as those available on the Internet, although the term isn't strictly limited to the internet, rather means all publicly available sources. The keyword behind the OSINT concept is information, and most importantly, information that can be obtained for free. It doesn't matter if it is located inside newspapers, blogs, web pages, tweets, social media cards, images, podcasts, or videos as long as it is public, free and legal.
+
+
+Firewall - A firewall is a network security device that monitors incoming and outgoing network traffic and decides whether to allow or block specific traffic based on a defined set of security rules. Firewalls have been the first line of defense in network security for over 25 years. They establish a barrier between secured and controlled internal networks that can be trusted and untrusted outside networks, such as the Internet.
+a firewall is a software program or hardware that prevents unauthorized access to or from a private network. A firewall isolates your computer from the Internet using a "wall of code" that inspects each individual "packet" of data as it arrives at either side of the firewall — inbound to or outbound from your computer — to determine whether it should be allowed to pass or be blocked.
+
+ACL - Access control list (ACL) provides an additional, more flexible permission mechanism for file systems. It is designed to assist with UNIX file permissions. ACL allows you to give permissions for any user or group to any disc resource. Traditional Linux access permissions for files and directories consist of setting a combination of read, write, and execute permissions for the owner of the file or directory, a member of the group the file or directory is associated with, and everyone else (other). Access control lists (ACLs) provide a fine-grained access control mechanism than these traditional Linux access permissions.
+
+NIDS - A network-based intrusion detection system (NIDS) is used to monitor and analyze network traffic to protect a system from network-based threats. A NIDS reads all inbound packets and searches for any suspicious patterns. When threats are discovered, based on its severity, the system can take action such as notifying administrators, or barring the source IP address from accessing the network.
+Network-based intrusion detection systems (NIDS) help to improve visibility of malicious activity inside your network that could otherwise go unnoticed. A network-based intrusion detection system is designed to help organizations monitor their cloud, on-premise and hybrid environments for suspicious events that could indicate a compromise. This includes policy violations, port scans plus unknown source and destination traffic.
+NIDS security technologies are ‘passive’ rather than ‘active’ in nature. They are designed solely to alert on suspicious activity, and for this reason, are often deployed alongside intrusion prevention systems (IPS) which are active.
+
+
+NIPS - A network-based intrusion prevention system (NIPS) is a system used to monitor a network as well as protect the confidentiality, integrity, and availability of a network. Its main functions include protecting the network from threats, such as a denial of service (DoS) and unauthorized usage.
+
+The NIPS monitors the network for malicious activity or suspicious traffic by analyzing the protocol activity. Once the NIPS is installed in a network, it is used to create physical security zones. This, in turn, makes the network intelligent and quickly discerns good traffic from bad traffic. In other words, the NIPS becomes like a prison for hostile traffic such as Trojans, worms, viruses, and polymorphic threats.
+
+An intrusion prevention system (IPS) sits in-line on the network and monitors the traffic. When a suspicious event occurs, it takes action based on certain prescribed rules. An IPS is an active and real-time device unlike an intrusion detection system, which is not inline and is a passive device. IPSs are considered to be the evolution of the intrusion detection system. The IPS often sits directly behind the firewall and provides a complementary layer of analysis that negatively selects for dangerous content. Unlike its predecessor the Intrusion Detection System (IDS)—which is a passive system that scans traffic and reports back on threats—the IPS is placed inline (in the direct communication path between source and destination), actively analyzing and taking automated actions on all traffic flows that enter the network. Specifically, these actions include:
+
+- Sending an alarm to the administrator (as would be seen in an IDS)
+- Dropping the malicious packets
+- Blocking traffic from the source address
+- Resetting the connection
+As an inline security component, the IPS must work efficiently to avoid degrading network performance. It must also work fast because exploits can happen in near real-time. The IPS must also detect and respond accurately, to eliminate threats and false positives (legitimate packets misread as threats).
+
+The majority of NIPSs utilize one of the three detection methods as follows:
+- Signature-based detection: Signatures are attack patterns predetermined and preconfigured. This detection method monitors the network traffic and compares it with the preconfigured signatures to find a match. On successfully locating a match, the NIPS takes the next appropriate action. This type of detection fails to identify zero-day error threats. However, it has proved to be very good against single packet attacks.
+- Anomaly-based detection: This method of detection creates a baseline on average network conditions. Once a baseline has been created, the system intermittently samples network traffic based on statistical analysis and compares the sample to the created baseline. If the activity is found to be outside the baseline parameters, NIPS takes the necessary action.
+- Protocol state analysis detection: This type of detection method identifies deviations of protocol states by comparing observed events with predefined profiles.
+
+
+Viligant user - vigilant to describe someone who keeps awake and alert in order to avoid danger or problems. He is the person who is familiar with cybersecurity practices like strong passwords, not opening the unknown emails and attachments, etc.
+
+audit logs - An audit log (also sometimes called an audit trail) is a chronological record of security-relevant data that documents the sequence of activities affecting an operation, procedure, event, file or document.
+In the case of a secure data management system like SecureDocs, audit logs are used to track the date, time and activity of each user, including the pages that have been viewed. Knowing who accessed various files or downloaded information can be valuable when raising funds, sharing financial information with auditors, storing legal or confidential employee information, protecting corporate intellectual property, or conducting other professional activities in a highly secure and organized manner.
+
+There are many more tools and techniques which can be used to hear for defense practices. The good defense practice can reduce the chances of attack over the enterprises and increase the security of the enterprise and its data.
