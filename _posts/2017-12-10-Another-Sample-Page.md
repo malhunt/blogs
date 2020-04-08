@@ -1,5 +1,6 @@
 ---
 title: Another Sample Page
+date: 2020-4-8
 published: true
 ---
 
